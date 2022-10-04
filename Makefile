@@ -28,7 +28,7 @@ build-pull: ## Build all the containers with pulling newest base
 build-pull-nc: ## Build all the containers with pulling newest base without caching
 		docker build --pull --no-cache --rm -t $(REPO)/$(USERNAME)/$(APP_NAME):$(VERSION) -t $(REPO)/$(USERNAME)/$(APP_NAME):latest -t $(USERNAME)/$(APP_NAME):$(VERSION) -t $(USERNAME)/$(APP_NAME):latest -f Dockerfile .
 
-buid-dev: ## Build all the dev containers
+build-dev: ## Build all the dev containers
 		docker build --rm -t $(REPO)/$(USERNAME)/$(APP_NAME):$(VERSION) -t $(REPO)/$(USERNAME)/$(APP_NAME):latest -f Dockerfile .
 
 build-docker: ## Build all the docker containers
